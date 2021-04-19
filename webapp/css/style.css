@@ -1,0 +1,170 @@
+
+/*
+gray-darker:               #444444;
+gray-dark:                 #696969;
+gray:                      #999999;
+gray-light:                #cccccc;
+gray-lighter:              #ececec;
+gray-lightest:             lighten(@gray-lighter,4%);
+*/
+
+/*Mobile*/
+body{
+    background-color: #f0f0f0;
+    margin: 20px;
+    font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px auto auto 200px;
+    grid-template-areas:
+    "header"
+    "navigation"
+    "main-content"
+    "footer";
+    grid-gap: 0px;
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.75);
+}
+
+header{
+    grid-area: header;
+    background-color: #ececec;
+    padding: 75px;
+    color:  #3f3f3f;
+    text-align: left;
+    font-size: 30px;
+    background-repeat: repeat;
+}
+
+nav{
+    grid-area: navigation;
+    background-color: #ccc;
+}
+
+nav.nav_list{
+    padding: 5px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li{
+    display: inline;
+}
+
+a{
+    font-size: 18px;
+    color: #696969;
+    text-decoration: none;
+}
+
+a:hover{
+    /* text-decoration: underline; */
+    color: white;
+    -webkit-transition: color 500ms linear;
+    -ms-transition: color 500ms linear;
+    transition: color 500ms linear;
+}
+
+main{
+    grid-area: main-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    background-color: rgb(222, 223, 199);
+}
+
+main article{
+    background-color: rgb(233, 231, 210);
+    padding: 10px;
+}
+
+footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    background-color: #b9b9b9;
+    font-size: 10px;
+
+}
+
+.footer{
+    color:white;
+    text-align: center;
+    padding-top:25px;
+}
+
+.start_img{
+    max-width: 100%;
+    height: auto;
+}
+article{
+    color: #444444;
+}
+
+/*Tablet*/
+@media screen and (min-width: 725px) {
+    body{
+        background-color: #f0f0f0;
+    }
+
+    section.grid-container{
+        width: 750px;
+        margin: 20px auto;
+    }
+
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav.nav_list{
+        text-align: center;
+    }
+
+    nav.nav_list ul li{
+        display: inline;
+        padding: 10px;
+    }
+}
+
+/*Desktop*/
+@media screen and (min-width: 1025px) {
+    body{
+        background-color: #f0f0f0;
+    }
+
+    section.grid-container{
+        width: 1000px;
+        margin: 20px auto;
+    }
+
+    main{
+        grid-template-columns: 1fr;
+    }
+
+    #signup{
+        background-color: red;
+        grid-template-columns: 1fr;
+    }
+
+    nav.nav_list{
+        text-align: center;
+    }
+
+    nav.nav_list ul li{
+        display: inline;
+        padding: 10px;
+    }
+}
+
